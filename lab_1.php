@@ -201,3 +201,77 @@ function printStringReturnNumber() : int
 $my_num = printStringReturnNumber();
 
 echo "$my_num\n";
+
+echo "\n16. Функции:\n";
+
+function increaseEnthusiasm(string $str) :string
+{
+	return $str . '!';
+}
+
+echo increaseEnthusiasm("Let's go") . "\n";
+
+function repeatThreeTimes(string $str) :string
+{
+	return $str . $str . $str;
+}
+
+echo repeatThreeTimes("Let's go") . "\n";
+
+echo increaseEnthusiasm(repeatThreeTimes("Let's go")) . "\n";
+
+function cut(string $str, int $cut_length = 10): string
+{
+	if (strlen($str) < $cut_length)
+	{
+		return $str;
+	}
+
+	$result = "";
+
+	for ($i = 0; $i < $cut_length; $i++)
+	{
+		$result .= $str[$i];
+	}
+
+	return $result;
+}
+
+function printArray(array $array, int $i = 0): void
+{
+	if ($i === sizeof($array))
+	{
+		echo $array[$i] . "\n";
+
+		return;
+	}
+
+	echo $array[$i] . "\n";
+
+	printArray($array, $i + 1);
+}
+
+printArray($array);
+
+function charSum(int $a): int
+{
+	$result = 0;
+
+	while ($a > 0)
+	{
+		$result += $a % 10;
+
+		$a /= 10;
+	}
+
+	if ($result > 9)
+	{
+		return charSum($result);
+	}
+	else
+	{
+		return $result;
+	}
+}
+
+echo charSum(19);
