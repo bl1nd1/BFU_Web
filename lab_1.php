@@ -188,3 +188,16 @@ for ($i = 0; $i < sizeof($array); $i++)
 		break;
 	}
 }
+
+echo "\n15. Функции:\n";
+
+function printStringReturnNumber() : int
+{
+	echo "String\n";
+
+	return 1;
+}
+
+$my_num = printStringReturnNumber();
+
+echo "$my_num\n";
