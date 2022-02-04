@@ -275,3 +275,89 @@ function charSum(int $a): int
 }
 
 echo charSum(19);
+
+echo "\n17. Массивы:\n";
+
+$array = [
+	"x",
+	"xx",
+	"xxx",
+	"xxxx",
+	"xxxxx"
+];
+
+function arrayFill(string $c, int $n): array
+{
+	$new_array = [];
+
+	for ($i = 0; $i < $n; $i++)
+	{
+		array_push($new_array, $c);
+	}
+
+	return $new_array;
+}
+
+var_dump(arrayFill('x', 5));
+
+$array = [[1,2,3],[4,5],[6]];
+
+$result = 0;
+
+foreach ($array as $sub)
+{
+	foreach ($sub as $num)
+	{
+		$result += $num;
+	}
+}
+
+echo $result . "\n";
+
+$array = [];
+
+$c = 0;
+
+for ($i = 0; $i < 3; $i++)
+{
+	$sub = [];
+
+	for ($j = 0; $j < 3; $j++)
+	{
+		array_push($sub, $c += 1);
+	}
+
+	array_push($array, $sub);
+}
+
+var_dump($array);
+
+$array = [2, 5, 3, 9];
+
+$result = $array[0] * $array[1] + $array[2] * $array[3];
+
+echo $result . "\n";
+
+$user = [
+	"name" => "Aleksandr",
+	"surname" => "Popov",
+	"patronymic" => "Vladislavovich"
+];
+
+echo $user["surname"] . ' ' . $user["name"] . ' ' . $user["patronymic"] . "\n";
+
+$date = [
+	'year' => "2022",
+	'month' => "02",
+	'day' => "04"
+];
+
+echo $date['year'] . '-' . $date['month'] . '-' . $date['day'] . "\n";
+
+$arr=['a','b','c','d','e'];
+
+echo sizeof($arr) . "\n";
+
+echo $arr[array_key_last($arr)] . "\n";
+
+echo $arr[array_key_last($arr) - 1] . "\n";
