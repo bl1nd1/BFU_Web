@@ -31,3 +31,15 @@ $last_month = 1187.23;
 $this_month = 1089.98;
 
 echo ($last_month - $this_month) . "\n";
+
+echo "\n11. Умножение и деление:\n";
+
+$num_languages = 4;
+
+$months = 11;
+
+$days = $months * 16;
+
+$days_per_language = $days / $num_languages;
+
+echo $days_per_language . "\n";
