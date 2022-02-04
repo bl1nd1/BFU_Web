@@ -423,3 +423,33 @@ for ($i = 1; $i <= 20; $i++)
 {
 	echo str_repeat('x', $i) . "\n";
 }
+
+echo "\n20. Комбинация функций:\n";
+
+$array = [1, 2, 3];
+
+echo array_sum($array) / sizeof($array) . "\n";
+
+$start = 1;
+
+$stop = 100;
+
+echo ($start + $stop) / 2 * ($stop - $start + 1) . "\n";
+
+$array = [1, 4, 9, 16, 25];
+
+var_dump(array_map('sqrt', $array));
+
+$keys = range('a', 'z');
+
+$values = range(1, 26);
+
+$array = array_combine($keys, $values);
+
+var_dump($array);
+
+$str = '1234567890';
+
+$array = str_split($str, 2);
+
+echo array_sum($array);
