@@ -416,3 +416,10 @@ if (sizeof($arr) === 3)
 {
 	echo ($arr[0] + $arr[1] + $arr[2]) . "\n";
 }
+
+echo "\n19. Циклы:\n";
+
+for ($i = 1; $i <= 20; $i++)
+{
+	echo str_repeat('x', $i) . "\n";
+}
