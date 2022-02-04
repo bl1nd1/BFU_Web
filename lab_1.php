@@ -361,3 +361,58 @@ echo sizeof($arr) . "\n";
 echo $arr[array_key_last($arr)] . "\n";
 
 echo $arr[array_key_last($arr) - 1] . "\n";
+
+function isSumGreaterThenTen(int $a, int $b): bool
+{
+	if ($a + $b > 10)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function isEqual(int $a, int $b): bool
+{
+	if ($a === $b)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+$test = 0;
+
+if($test == 0) echo 'верно' . "\n";
+
+$age = 11;
+
+if ($age < 10 && $age > 99)
+{
+	echo "Возраст вне диапозона\n";
+}
+else
+{
+	$sum = 0;
+
+	while ($age > 0)
+	{
+		$sum += $age % 10;
+
+		$age /= 10;
+	}
+
+	echo $sum . "\n";
+}
+
+$arr = [1, 2, 3];
+
+if (sizeof($arr) === 3)
+{
+	echo ($arr[0] + $arr[1] + $arr[2]) . "\n";
+}
