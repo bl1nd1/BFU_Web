@@ -47,3 +47,21 @@ echo $days_per_language . "\n";
 echo "\n12. Степень:\n";
 
 echo 8 ** 2 . "\n";
+
+echo "\n13. Операторы присвоения:\n";
+
+$my_num = 1;
+
+$answer = $my_num;
+
+$answer += 2;
+
+$answer *= 2;
+
+$answer -= 2;
+
+$answer /= 2;
+
+$answer -= $my_num;
+
+echo $answer . "\n";
