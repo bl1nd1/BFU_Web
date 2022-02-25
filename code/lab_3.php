@@ -14,4 +14,4 @@ foreach ($str as $word)
 echo "1(b) task\n";
 $regex = "/(\d)+/";
 $str = "a1b2c3";
-echo preg_replace_callback($regex, function($matches) { return intval($matches[0]) ** 3; }, $str);
+echo preg_replace_callback($regex, function($matches) { return intval($matches[0]) ** 3; }, $str) . "\n";
